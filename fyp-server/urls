@@ -1,0 +1,20 @@
+BASE URL : http://localhost:5000
+
+create worker : http://localhost:5000/worker  type : POST
+get worker by id : http://localhost:5000/worker/:id type: GET
+get workers : http://localhost:5000/worker type GET
+create service  : http://localhost:5000/worker/service/create type: POST
+get worker by log lat : http://localhost:5000/worker/get-by-log-lat/:log/:lat type: GET
+
+create client : http://localhost:5000/client  type : POST
+get worker by id : http://localhost:5000/client/:id type: GET
+get workers : http://localhost:5000/client type GET
+
+login : http://localhost:5000/login   type:POST
+
+create booking : http://localhost:5000/booking/book type: POST
+get Booking by id :  http://localhost:5000/booking/book/:id type: get
+get Bookings  : http://localhost:5000/booking/book  type : get
+get book by client id : http://localhost:5000/booking/book/client/:id type: get
+get book by worker id : http://localhost:5000/booking/book/worker/:id type: get
+

@@ -1,0 +1,36 @@
+<nb-card>
+    <nb-card-header fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center" fxFill>
+        <h4>CCTV-labore List {{total}}</h4>
+    </nb-card-header>
+    <nb-card-body>
+        <table style="width: 100%;">
+            <thead>
+                <colgroup></colgroup>
+                <tr>
+                    <th>FullName</th>
+                    <th>Phone</th>
+                    <th>ProfessionTitle</th>
+                    <th>Location</th>
+                    <th>Rating</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of list">
+                    <td>{{item.fullName}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.professionTitle}}</td>
+
+                    <td>lat : {{item.location.lat | number:'1.2-2'}} long : {{item.location.log | number:'1.2-2'}}</td>
+                    <td>{{item.rating| number:'1.2-2'}}</td>
+                    <td>{{item.user_id.email}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </nb-card-body>
+    <nb-card-footer>
+        <!-- <app-pagination [page]="page" [per_page]="per_page" [total]="total" (onPageChange)="onPageChange($event)"
+            (onPerPageChange)="onPerPageChange($event)"></app-pagination> -->
+    </nb-card-footer>
+</nb-card>

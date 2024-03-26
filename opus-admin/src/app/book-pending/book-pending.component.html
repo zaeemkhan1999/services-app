@@ -1,0 +1,29 @@
+<nb-card>
+    <nb-card-header fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center" fxFill>
+        <h4>Pending Booking List {{total}}</h4>
+    </nb-card-header>
+    <nb-card-body>
+        <table style="width: 100%;">
+            <thead>
+                <colgroup></colgroup>
+                <tr>
+                    <th>Clint Name </th>
+                    <th>Service Provider Name</th>
+                    <th>Job Discription</th>
+                    <th>Created On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of list">
+                    <td>{{item.Client.fullName}}</td>
+                    <td>{{item.Worker.fullName}}</td>
+                    <td>{{item.Worker.professionTitle}}</td>
+                    <td>{{item.Worker.createdAt }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </nb-card-body>
+    <nb-card-footer>
+
+    </nb-card-footer>
+</nb-card>

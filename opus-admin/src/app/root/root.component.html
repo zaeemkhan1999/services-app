@@ -1,0 +1,19 @@
+<nb-layout>
+    <nb-layout-header>
+        <div style="width: 100%;" fxLayout="row" fxLayoutAlign="space-between center">
+            <nb-icon icon="menu" (click)="toggle()"></nb-icon>
+            <nb-user shape="semi-round" name="Admin" title="Opus"></nb-user>
+        </div>
+    </nb-layout-header>
+    <nb-sidebar>
+        <div class="menu">
+            <nb-menu [items]="items" class="menu"></nb-menu>
+        </div>
+    </nb-sidebar>
+    <nb-layout-column>
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+</nb-layout>
+<nb-layout-footer>
+
+</nb-layout-footer>
